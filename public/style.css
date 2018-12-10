@@ -1,0 +1,52 @@
+/* the 'body' selector is required for the tests to pass */
+/* You can change the style attributes if you want */
+body {
+  background-color: #222;
+  color: #ddd;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+h3{
+  text-align: center;  
+}
+
+u1{
+  list-style-type: none;
+}
+
+p{
+  text-align: center;  
+}
+
+li{
+  margin-left:350px;
+  padding: 5px;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+}

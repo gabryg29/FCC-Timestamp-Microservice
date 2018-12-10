@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Hello HTML</title>
+		<link rel="stylesheet" href="/style.css">
+	</head>
+  
+	<body>
+		<h1>API TimeStamp</h1>
+    <h2>Proyecto Microservicios</h2>
+    
+		<ol>
+      <li>EndPoint de la API: <code>GET [project_url]/api/timestamp/:date_string?</code></li>
+      <li>Un string de fecha es válido si puede usarse con <code>new Date(date_string)</code>.<br>
+        El timestamp en unix tiene que ser un <strong>entero</strong> (no un string) y muestra un número de <strong>milisegundos</strong>.<br>
+        En estas pruebas se van a utilizar strings que cumplen con la <code>ISO-8601</code> (por ejemplo <code>"2016-11-20"</code>) para asegurarnos de que el timestamp es UTC</li>
+      <li>Si el string está <strong>vacío</strong>, debería ser equivalente a ejecutar <code>new Date()</code>, y el servicio usará la hora actual.</li>
+      <li>Si el string es <strong>válido</strong> la API devolverá un JSON con la siguiente estructura:<br>
+        <code>{"unix": &lt;date.getTime()&gt;, "utc" : &lt;date.toUTCString()&gt; }</code><br>
+        Por ejemplo: <code>{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}</code></li>
+      <li>Si el string es <strong>érroneo</strong> la API devolverá un JSON con la siguiente estructura:<br><code>{"error" : "Fecha Errónea" }</code>.</li>
+    </ol>
+    
+    <h3>Ejemplo de uso:</h3>
+    <ul>
+      <p><a href="api/timestamp/2015-12-25">https://1-gabriel-fcc-timestamp-microservice.glitch.me//api/timestamp/2015-12-25</a></p>
+      <p><a href="api/timestamp/1450137600000">https://1-gabriel-fcc-timestamp-microservice.glitch.me//api/timestamp/1450137600</a></p>
+
+    <h3>Ejemplo de resultado JSON:</h3>
+    <p>
+      <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+    </p>
+	</body>
+
+</html>
